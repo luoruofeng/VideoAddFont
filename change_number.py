@@ -3,16 +3,7 @@ import os
 import re
 
 
-if __name__ == "__main__":
-	avgs = sys.argv[1:]
-	
-	if len(avgs) < 1 or len(avgs) > 2 :
-		print("Input font file path argument please!!")
-		quit()
-
-	read_file = avgs[0]
-	write_file = avgs[1]
-
+def change_font_number(read_file,write_file):
 	i = 1
 	with open(read_file, "r") as rf:
 		with open(write_file, "w+") as wf:
