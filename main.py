@@ -39,6 +39,7 @@ def process_files(folder_path):
                     merge_video.add_font(video_file,subtitle_file,add_suffix_to_filepath(video_file,"new"))
                     remove_change_to_old_name(video_file)
 
+                    os.remove(subtitle_file)
                 except Exception as e:
                     print(f"执行命令时出错：{e}")
             else:
